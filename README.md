@@ -32,7 +32,7 @@
       color: white;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
     header p {
@@ -110,11 +110,31 @@
     .project-card div {
       padding: 1rem;
     }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 0.5rem;
+      height: auto;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #94a3b8;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
@@ -168,6 +188,14 @@
             <p>Simulated ZPF firewall, SSH security, Syslog tracking, ACLs and rogue detection scenarios.</p>
           </div>
         </div>
+      </div>
+    </section>
+    <section>
+      <h2>📷 Gallery</h2>
+      <div class="gallery-grid">
+        <img src="gallery1.jpg" alt="Lab Network" />
+        <img src="gallery2.jpg" alt="Syslog Screenshot" />
+        <img src="gallery3.jpg" alt="Packet Tracer Topology" />
       </div>
     </section>
     <section>
