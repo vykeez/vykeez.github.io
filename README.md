@@ -12,6 +12,7 @@
       --fg: #f1f5f9;
       --accent: #38bdf8;
       --card-bg: #1e293b;
+      --card-hover: #334155;
     }
     * {
       margin: 0;
@@ -25,16 +26,18 @@
       line-height: 1.6;
     }
     header {
-      background: var(--card-bg);
-      padding: 2rem 1rem;
+      background: url('header-bg.jpg') center/cover no-repeat;
+      padding: 4rem 1rem 2rem;
       text-align: center;
+      color: white;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
     header p {
-      color: #94a3b8;
+      font-size: 1.2rem;
+      color: #e2e8f0;
     }
     .profile-pic {
       width: 120px;
@@ -54,7 +57,10 @@
       background: var(--card-bg);
       padding: 1.5rem;
       border-radius: 0.75rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    section:hover {
+      background: var(--card-hover);
     }
     h2 {
       color: var(--accent);
@@ -80,6 +86,29 @@
     }
     .resume-btn:hover {
       background-color: #0ea5e9;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .project-card {
+      background-color: #1e293b;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .project-card div {
+      padding: 1rem;
     }
     footer {
       text-align: center;
@@ -124,12 +153,22 @@
     </section>
     <section>
       <h2>📁 Projects</h2>
-      <p><strong>vSphere Datacenter Simulation</strong> – Capstone Project</p>
-      <ul>
-        <li>14+ VMs including AD, DNS, DHCP, Syslog, iSCSI, DFS, HTTP, Proxy</li>
-        <li>Used OPNsense for VLAN routing and firewall</li>
-        <li>Configured backup (Veeam), DFS replication, thin provisioning</li>
-      </ul>
+      <div class="project-gallery">
+        <div class="project-card">
+          <img src="project1.jpg" alt="vSphere Datacenter" />
+          <div>
+            <h3>vSphere Datacenter</h3>
+            <p>Designed an enterprise-grade infrastructure with 14+ VMs, VLANs, OPNsense, Veeam, DFS, and more.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="project2.jpg" alt="Cyber Lab" />
+          <div>
+            <h3>Cybersecurity Lab</h3>
+            <p>Simulated ZPF firewall, SSH security, Syslog tracking, ACLs and rogue detection scenarios.</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section>
       <h2>📧 Contact</h2>
