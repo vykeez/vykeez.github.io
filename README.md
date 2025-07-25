@@ -1,206 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vysakh Keezhedath | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vysakh Keezhedath</title>
   <style>
     :root {
-      --primary: #0a192f;
+      --bg: #000;
+      --fg: #fff;
       --accent: #38bdf8;
-      --text: #e0e0e0;
-      --bg: #f5f5f5;
-      --dark-bg: #020c1b;
+      --hr: #333;
+    }
+    [data-theme="light"] {
+      --bg: #fff;
+      --fg: #000;
+      --accent: #0066cc;
+      --hr: #ddd;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark-bg);
-      color: var(--text);
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
+      transition: background 0.3s, color 0.3s;
     }
-    nav {
-      display:flex;
-      justify-content:center;
-      gap:1.5rem;
-      padding:1rem;
-      background: rgba(10,25,47,0.85);
-      position:sticky;
-      top:0;
-      z-index:100;
+    .container {
+      max-width:800px;
+      margin: auto;
+      padding:2rem;
     }
-    nav a {
-      color: var(--text);
-      text-decoration:none;
-      font-weight:600;
-    }
-    nav a:hover {
-      color: var(--accent);
-    }
-    .hero {
-      text-align:center;
-      padding:6rem 1rem;
-      background: url('header-bg.jpg') center/cover no-repeat;
-    }
-    .hero h1 {
-      font-size:2.5rem;
-      margin-bottom:0.5rem;
-    }
-    .hero p {
-      font-size:1.25rem;
-      color:#8892b0;
+    h1 { font-size:2rem; margin-bottom:1rem; }
+    h2 { font-size:1.25rem; color: var(--accent); margin-top:2rem; margin-bottom:0.5rem; }
+    ul { padding-left:1.2rem; }
+    li { margin-bottom:0.5rem; }
+    a { color: var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    hr { border:none; border-top:1px solid var(--hr); margin:2rem 0; }
+    #theme-toggle {
+      position: fixed;
+      top:1rem;
+      right:1rem;
+      background:none;
+      border:none;
+      font-size:1.5rem;
+      cursor:pointer;
+      color: var(--fg);
+      transition: color 0.3s;
     }
     section {
-      padding:4rem 1rem;
-      max-width:900px;
-      margin:auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-    h2 {
-      font-size:1.75rem;
-      color: var(--accent);
-      margin-bottom:1rem;
-      text-align:center;
+    section.visible {
+      opacity:1;
+      transform:translateY(0);
     }
-    ul, p { margin-bottom: 1rem; }
-    .grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .card {
-      background: rgba(10,25,47,0.6);
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-    }
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-    .progress {
-      background: #334155;
-      height: 8px;
-      border-radius: 4px;
-      overflow: hidden;
-      margin: 0.25rem 0 1rem;
-    }
-    .bar {
-      height: 100%;
-      background: var(--accent);
-    }
-    .timeline {
-      list-style: none;
-      padding-left: 1rem;
-      border-left: 2px solid var(--accent);
-    }
-    .timeline li {
-      margin-bottom: 1.5rem;
-      padding-left: 1rem;
-      position: relative;
-    }
-    .timeline li::before {
-      content: '';
-      position: absolute;
-      left: -0.55rem;
-      top: 0.35rem;
-      width: 0.75rem;
-      height: 0.75rem;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    @media (max-width:600px) {
+      .container { padding:1rem; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="home" class="hero">
-    <h1>Hi! I'm Vysakh</h1>
-    <p>Computer Networks Graduate | Systems and Cybersecurity Enthusiast</p>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Vysakh Keezhedath, a Computer Networks graduate with a strong foundation in networking, cybersecurity, and systems administration. I’ve worked on routers, firewalls, Linux/Windows servers, and enjoy hands-on problem-solving.</p>
-    <p>I currently work at Petro Canada and Loblaws, and previously gained tech experience at Amazon and as a Technician in India working with NAS and Raspberry Pi setups.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div>
-        <strong>Routing</strong> 90%
-        <div class="progress"><div class="bar" style="width:90%; background:#38bdf8;"></div></div>
-        <strong>Switching</strong> 80%
-        <div class="progress"><div class="bar" style="width:80%; background:#ef4444;"></div></div>
-        <strong>Firewalling</strong> 90%
-        <div class="progress"><div class="bar" style="width:90%; background:#fbbf24;"></div></div>
-        <strong>Web Security - Proxy</strong> 90%
-        <div class="progress"><div class="bar" style="width:90%; background:#a855f7;"></div></div>
-        <strong>Mail Security</strong> 90%
-        <div class="progress"><div class="bar" style="width:90%; background:#14b8a6;"></div></div>
-        <strong>E-Mail Encryption</strong> 85%
-        <div class="progress"><div class="bar" style="width:85%; background:#6366f1;"></div></div>
-        <strong>Windows Server</strong> 70%
-        <div class="progress"><div class="bar" style="width:70%; background:#3b82f6;"></div></div>
-        <strong>Linux Server</strong> 65%
-        <div class="progress"><div class="bar" style="width:65%; background:#2563eb;"></div></div>
-        <strong>Load-Balancer</strong> 70%
-        <div class="progress"><div class="bar" style="width:70%; background:#0ea5e9;"></div></div>
-        <strong>Virtualisation</strong> 65%
-        <div class="progress"><div class="bar" style="width:65%; background:#3b82f6;"></div></div>
-      </div>
-    </div>
-
-    <br><br>
-    <div class="grid">
-      <div class="card"><h3>ROUTING</h3><p>Configured, managed and replaced around 42 Cisco WAN Routers with IKEv2 VPN Tunnel.</p></div>
-      <div class="card"><h3>SWITCHING</h3><p>Including most switching technologies like Spanning-tree, vPC, VXLAN, etc.</p></div>
-      <div class="card"><h3>INFORMATION SECURITY</h3><p>Firewalling, Mail Security, Web Security, E-Mail Encryption, RSA, VPN, AAA, and SSL-Certificates.</p></div>
-      <div class="card"><h3>WINDOWS & LINUX</h3><p>Working with AD, DNS, DHCP and Linux services for deployment and troubleshooting.</p></div>
-      <div class="card"><h3>LOAD-BALANCER</h3><p>Layer 3-4 and Application Layer Load Balancing using Citrix ADC (NetScaler).</p></div>
-      <div class="card"><h3>SYSTEM ADMINISTRATION</h3><p>Experience administering servers, logging, monitoring, and security appliances.</p></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>vSphere Datacenter Simulation (Capstone)</h3>
+  <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
+  <div class="container">
+    <h1>Vysakh Keezhedath</h1>
+    <p>Systems Technician | Networking and Cybersecurity Specialist</p>
+    <hr>
+    <section>
+      <h2>Skills</h2>
       <ul>
-        <li>Deployed 14+ VMs with VLAN segmentation using OPNsense</li>
-        <li>Configured AD, DNS, DHCP, iSCSI, Syslog, Proxy, HTTP, DFS</li>
-        <li>Enabled Veeam backup, DFS replication, and thin provisioning</li>
+        <li>Networking: OSPF, VLANs, NAT, DHCP, Subnetting, VPN, DNS</li>
+        <li>Cybersecurity: Cisco Cybersecurity Certificate, Firewall (ZPF), ACLs, SSH Hardening, Syslog Monitoring</li>
+        <li>Systems & Servers: VMware vSphere, Windows Server, Linux (Ubuntu, Rocky), AD/DNS, File Services, DHCP, Veeam</li>
+        <li>Hardware & Devices: Raspberry Pi, NAS setup, home server configuration, router troubleshooting</li>
       </ul>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul class="timeline">
-      <li><strong>Petro Canada</strong> – Manager (Present)</li>
-      <li><strong>Loblaws</strong> – Employee (Present)</li>
-      <li><strong>Amazon Warehouse</strong> – Associate (Past)</li>
-      <li><strong>Cyber Systems, India</strong> – Technician (1 Year)</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:vkeez0002@gmail.com">vkeez0002@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/vykeez" target="_blank">github.com/vykeez</a></p>
-  </section>
+    </section>
+    <hr>
+    <section>
+      <h2>Education &amp; Certifications</h2>
+      <ul>
+        <li>Diploma in Computer Networking – Canada</li>
+        <li>Cisco Cybersecurity Certification</li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Petro Canada</strong> – Manager (Present)</li>
+        <li><strong>Loblaws</strong> – Employee (Present)</li>
+        <li><strong>Amazon Warehouse</strong> – Associate</li>
+        <li><strong>Cyber Systems, India</strong> – Technician (1 Year)</li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>vSphere Datacenter Simulation (Capstone)</strong></li>
+        <li>14+ VMs including Jump Server, AD/DNS, Syslog, Proxy, iSCSI, DFS, HTTP, and Backup</li>
+        <li>Configured VLAN segmentation using OPNsense firewall</li>
+        <li>Enabled thin provisioning, iSCSI storage, Syslog monitoring, Proxy filtering, and DFS replication</li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:vkeez0002@gmail.com">vkeez0002@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/vykeez" target="_blank">github.com/vykeez</a></p>
+    </section>
+  </div>
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    function updateIcon() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      toggle.textContent = theme === 'light' ? '🌜' : '🌞';
+    }
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const target = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('theme', target);
+      updateIcon();
+    });
+    // Load saved theme
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateIcon();
+    // Fade-in on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(sec => obs.observe(sec));
+    });
+  </script>
 </body>
 </html>
