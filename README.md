@@ -1,173 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vysakh Keezhedath</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-bg: #0f172a;
-      --card-bg: #1e293b;
+      --bg: #000;
+      --fg: #fff;
       --accent: #38bdf8;
-      --text: #f8fafc;
-      --muted: #94a3b8;
+      --hr: #333;
+    }
+    [data-theme="light"] {
+      --bg: #fff;
+      --fg: #000;
+      --accent: #0066cc;
+      --hr: #ddd;
     }
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
     body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--main-bg);
-      color: var(--text);
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-    }
-    header {
-      background: url('https://source.unsplash.com/1600x600/?cybersecurity,network') no-repeat center/cover;
-      text-align: center;
-      padding: 6rem 2rem;
-      color: white;
-    }
-    header h1 {
-      font-size: 3rem;
-    }
-    header p {
-      font-size: 1.25rem;
-      color: #e2e8f0;
+      transition: background 0.3s, color 0.3s;
     }
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 2rem;
     }
-    h2 {
-      color: var(--accent);
+    h1, h2 {
+      font-weight: 600;
       margin-bottom: 1rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.25rem;
     }
-    .card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
+    .about, .skills, .education {
+      margin-bottom: 3rem;
     }
-    .card h3 {
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-    .skill-bar {
-      height: 8px;
-      background: var(--muted);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: 0.5rem;
-    }
-    .skill-fill {
-      height: 100%;
-      background: var(--accent);
-      transition: width 1s ease-in-out;
-    }
-    .skill-label {
+    .skills-bar {
       display: flex;
       justify-content: space-between;
-      margin-top: 0.25rem;
+      align-items: center;
+      margin: 0.5rem 0;
     }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .skills-bar .label {
+      flex: 1;
+    }
+    .skills-bar .bar {
+      flex: 3;
+      height: 8px;
+      background: #333;
+      margin-left: 1rem;
+      position: relative;
+      border-radius: 4px;
+    }
+    .skills-bar .bar::after {
+      content: '';
+      position: absolute;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--accent);
+      width: var(--value);
+    }
+    .education-card {
+      background: #111;
+      border-left: 6px solid var(--accent);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--fg);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vysakh Keezhedath</h1>
-    <p>Systems Technician | Networking and Cybersecurity Specialist</p>
-  </header>
+  <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
   <div class="container">
-    <section>
-      <h2>About Me</h2>
-      <p>Hi, I'm Vysakh Keezhedath. Welcome to my portfolio website! I am a Network and Systems Engineer. I am excited to share with you my work and experience in this field.</p>
-      <p>I have always had a passion for Computer Systems and Networking and have pursued it throughout my education and career. I graduated from Informatics Academy with a degree in Network Engineering and have since gained valuable experience through Apprenticeship and job opportunities.</p>
+    <section class="about">
+      <h1>Vysakh Keezhedath</h1>
+      <p>Systems Technician, Networking and Cybersecurity Specialist</p>
+      <p>Hi I'm Vysakh Keezhedath. Welcome to my portfolio website! I am a Network and Systems Engineer. I am excited to share with you my work and experience in this field.</p>
+      <p>I have always had a passion for Computer Systems and Networking and have pursued it throughout my education and career. I graduated with a diploma in Computer Systems Technician and Networking and have since gained valuable experience through apprenticeship and job opportunities.</p>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <div class="card">
-        <h3>Diploma in Computer Systems Technician and Networking</h3>
-        <p>Completed at Informatics Academy with focus on Networking and System Technologies.</p>
-      </div>
-      <div class="card">
-        <h3>Cisco Cybersecurity Certificate</h3>
-        <p>Credential earned as part of specialization in Network Security and Cyber Defense.</p>
-      </div>
-      <div class="card">
-        <h3>Google Cybersecurity Certificate</h3>
-        <p>Professional Certificate covering risk management, incident response, and tools.</p>
-      </div>
-      <div class="card">
-        <h3>Apprenticeship – Algonquin College</h3>
-        <p>Hands-on lab training during studies: Networking Lab, Linux Lab, Server Room, PC Troubleshooting, IT Service Center.</p>
-      </div>
-    </section>
-
-    <section>
+    <section class="skills">
       <h2>Skills</h2>
-      <div class="card">
-        <div class="skill-label"><span>Routing</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+      <div class="skills-bar"><span class="label">Routing</span><div class="bar" style="--value: 90%;"></div></div>
+      <div class="skills-bar"><span class="label">Switching</span><div class="bar" style="--value: 80%;"></div></div>
+      <div class="skills-bar"><span class="label">Firewalling</span><div class="bar" style="--value: 90%;"></div></div>
+      <div class="skills-bar"><span class="label">Mail Security</span><div class="bar" style="--value: 90%;"></div></div>
+      <div class="skills-bar"><span class="label">Windows Server</span><div class="bar" style="--value: 70%;"></div></div>
+      <div class="skills-bar"><span class="label">Load-Balancer</span><div class="bar" style="--value: 70%;"></div></div>
+      <div class="skills-bar"><span class="label">Web Security - Proxy</span><div class="bar" style="--value: 90%;"></div></div>
+      <div class="skills-bar"><span class="label">E-Mail Encryption</span><div class="bar" style="--value: 85%;"></div></div>
+      <div class="skills-bar"><span class="label">Linux Server</span><div class="bar" style="--value: 65%;"></div></div>
+      <div class="skills-bar"><span class="label">Virtualisation</span><div class="bar" style="--value: 65%;"></div></div>
+    </section>
 
-        <div class="skill-label"><span>Firewalling</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
-
-        <div class="skill-label"><span>Windows Server</span><span>70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-
-        <div class="skill-label"><span>Linux Server</span><span>65%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
-
-        <div class="skill-label"><span>Load Balancer</span><span>70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-
-        <div class="skill-label"><span>Web Proxy</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
-
-        <div class="skill-label"><span>Virtualization</span><span>65%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+    <section class="education">
+      <h2>Education & Certifications</h2>
+      <div class="education-card">
+        <h3>Diploma in Computer Systems Technician and Networking</h3>
+        <p>Completed in Canada with focus on Systems, Networking and Cybersecurity. Gained hands-on training in network lab, Linux lab, server room, and IT service center.</p>
       </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>vSphere Datacenter Simulation</h3>
-        <p>Deployed 14+ VMs including Jump Server, AD/DNS, Syslog, Proxy, iSCSI, DFS, HTTP, and Backup using OPNsense firewall, iSCSI storage, DFS replication, and Syslog monitoring.</p>
+      <div class="education-card">
+        <h3>Cisco Cybersecurity Certificate</h3>
+        <p>Completed training on threat detection, security fundamentals, and access control.</p>
       </div>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Petro Canada</strong> – Manager (Present)</li>
-        <li><strong>Loblaws</strong> – Employee (Present)</li>
-        <li><strong>Amazon Warehouse</strong> – Associate</li>
-        <li><strong>Cyber Systems, India</strong> – Technician (1 Year)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:vkeez0002@gmail.com">vkeez0002@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/vykeez" target="_blank">github.com/vykeez</a></p>
+      <div class="education-card">
+        <h3>Google Cybersecurity Certificate</h3>
+        <p>Learned practical security operations and risk management techniques.</p>
+      </div>
+      <div class="education-card">
+        <h3>Apprenticeship at Algonquin College</h3>
+        <p>Practical exposure in Network Labs, Linux labs, PC troubleshooting, and service center operations during diploma program.</p>
+      </div>
     </section>
   </div>
-  <footer>
-    <p>&copy; 2025 Vysakh Keezhedath</p>
-  </footer>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    function updateIcon() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      toggle.textContent = theme === 'light' ? '🌜' : '🌞';
+    }
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const target = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('theme', target);
+      updateIcon();
+    });
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateIcon();
+  </script>
 </body>
 </html>
