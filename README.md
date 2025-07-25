@@ -101,19 +101,21 @@
     <section>
       <h2>Job Experience</h2>
       <ul>
-        <li><strong>Petro Canada</strong> – Manager (Present)<br>Supervising store operations and resolving tech issues (POS, network)</li>
-        <li><strong>Loblaws</strong> – Employee (Present)<br>Supporting backend systems and logistics operations</li>
-        <li><strong>Amazon Warehouse</strong> – Associate<br>Logistics and scanning systems, hands-on tech troubleshooting</li>
-        <li><strong>Cyber Systems – India</strong> – Technician (1 Year)<br>Worked on SOHO routers, PC repair, NAS setup, and Raspberry Pi deployments</li>
-        <li><strong>Apprenticeship – Algonquin College (Student Placement)</strong><br>Worked in Networking Labs, Linux Labs, Server Rooms, and IT Service Desk troubleshooting PCs and configuring enterprise infrastructure</li>
+        <li><strong>Apprenticeship – Algonquin College</strong><br>Worked in Networking Labs, Linux Labs, Server Rooms, and IT Service Desk troubleshooting PCs and configuring enterprise infrastructure</li>
       </ul>
+      <li><strong>Cyber Systems – India</strong> – Technician (1 Year)<br>Worked on SOHO routers, PC repair, NAS setup, and Raspberry Pi deployments</li>
+        
+        <li><strong>Petro Canada</strong> – Manager (Present)<br>Supervising store operations and resolving tech issues</li>
+        <li><strong>Loblaws</strong> – Employee (Present)<br>Supporting backend systems and logistics operations</li>
+        <li><strong>Amazon Warehouse</strong> – Associate<bre</li>
+        
     </section>
 
     <hr>
     <section>
       <h2>Education & Certifications</h2>
       <ul>
-        <li><strong>Diploma:</strong> Computer Systems Technician – Networking (Canada)</li>
+        <li><strong>Diploma:</strong> Completed Computer Systems Technician and Networking From Algonquin College, Ottawa, Canada</li>
         <li><strong>Certificates:</strong> Cisco Cybersecurity, Google Cybersecurity</li>
       </ul>
     </section>
@@ -171,7 +173,7 @@
       <div class="cards-container">
         <div class="card">
           <h3>Routing</h3>
-          <p>Configured, managed and replaced 42+ Cisco WAN routers, with IKEv2 VPN tunnels.</p>
+          <p>Proficient in configuring and managing dynamic and static routing protocols including OSPF, EIGRP, RIP, and BGP in both enterprise and lab environments.</p>
         </div>
         <div class="card">
           <h3>Switching</h3>
@@ -198,9 +200,21 @@
 
     <hr>
     <section>
+      <h2>Project Showcase</h2>
+      <ul>
+        <li><strong>vSphere Datacenter Simulation (Capstone)</strong> – Designed a fully virtualized enterprise IT environment using VMware vSphere, with 14+ VMs including services like Active Directory, DNS, Syslog, Proxy, iSCSI, DFS, HTTP, and Backup.</li>
+        <li>Set up OPNsense firewall for VLAN segmentation and security policy enforcement.</li>
+        <li>Implemented thin provisioning, iSCSI target setup, and DFS replication for distributed file systems.</li>
+        <li>Demonstrated centralized logging, proxy web filtering, and high-availability storage configuration.</li>
+      </ul>
+    </section>
+
+    <hr>
+    <section>
       <h2>Contact</h2>
       <p>Email: <a href="mailto:vkeez0002@gmail.com">vkeez0002@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/vykeez" target="_blank">github.com/vykeez</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/vysak_h__k?igsh=M2o0eDJleXNsZnk=" target="_blank">@vysak_h__k</a></p>
     </section>
   </div>
   <script>
