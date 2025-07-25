@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vysakh Keezhedath</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --bg: #000;
@@ -79,6 +80,20 @@
       display: block;
       height: 100%;
       background: var(--accent);
+    }
+    .contact-icons {
+      display: flex;
+      gap: 2rem;
+      font-size: 2rem;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    .contact-icons a {
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.2);
     }
     @media (max-width:600px) {
       .container { padding:1rem; }
@@ -162,9 +177,11 @@
     <hr>
     <section>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:vkeez0002@gmail.com">vkeez0002@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/vykeez" target="_blank">github.com/vykeez</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/vysak_h__k?igsh=M2o0eDJleXNsZnk=" target="_blank">@vysak_h__k</a></p>
+      <div class="contact-icons">
+        <a href="mailto:vkeez0002@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/vykeez" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/vysak_h__k?igsh=M2o0eDJleXNsZnk=" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </section>
   </div>
   <script>
