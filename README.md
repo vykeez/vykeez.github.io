@@ -76,6 +76,17 @@
     .card h3 {
       margin-bottom: 0.5rem;
     }
+    .progress {
+      background: #334155;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0.25rem 0 1rem;
+    }
+    .bar {
+      height: 100%;
+      background: var(--accent);
+    }
     .timeline {
       list-style: none;
       padding-left: 1rem;
@@ -129,11 +140,38 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="grid">
-      <div class="card"><h3>Networking</h3><p>OSPF, VLAN, NAT, VPN, DHCP, DNS</p></div>
-      <div class="card"><h3>Cybersecurity</h3><p>Cisco Cert, ACLs, Syslog, SSH Hardening, ZPF Firewall</p></div>
-      <div class="card"><h3>Systems</h3><p>Windows/Linux servers, Veeam, File Services, AD/DNS</p></div>
-      <div class="card"><h3>Tools</h3><p>Wireshark, GNS3, Packet Tracer, VS Code, Git</p></div>
-      <div class="card"><h3>Hardware</h3><p>NAS, Raspberry Pi, Routers, Server Builds</p></div>
+      <div>
+        <strong>Routing</strong> 90%
+        <div class="progress"><div class="bar" style="width:90%; background:#38bdf8;"></div></div>
+        <strong>Switching</strong> 80%
+        <div class="progress"><div class="bar" style="width:80%; background:#ef4444;"></div></div>
+        <strong>Firewalling</strong> 90%
+        <div class="progress"><div class="bar" style="width:90%; background:#fbbf24;"></div></div>
+        <strong>Web Security - Proxy</strong> 90%
+        <div class="progress"><div class="bar" style="width:90%; background:#a855f7;"></div></div>
+        <strong>Mail Security</strong> 90%
+        <div class="progress"><div class="bar" style="width:90%; background:#14b8a6;"></div></div>
+        <strong>E-Mail Encryption</strong> 85%
+        <div class="progress"><div class="bar" style="width:85%; background:#6366f1;"></div></div>
+        <strong>Windows Server</strong> 70%
+        <div class="progress"><div class="bar" style="width:70%; background:#3b82f6;"></div></div>
+        <strong>Linux Server</strong> 65%
+        <div class="progress"><div class="bar" style="width:65%; background:#2563eb;"></div></div>
+        <strong>Load-Balancer</strong> 70%
+        <div class="progress"><div class="bar" style="width:70%; background:#0ea5e9;"></div></div>
+        <strong>Virtualisation</strong> 65%
+        <div class="progress"><div class="bar" style="width:65%; background:#3b82f6;"></div></div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="grid">
+      <div class="card"><h3>ROUTING</h3><p>Configured, managed and replaced around 42 Cisco WAN Routers with IKEv2 VPN Tunnel.</p></div>
+      <div class="card"><h3>SWITCHING</h3><p>Including most switching technologies like Spanning-tree, vPC, VXLAN, etc.</p></div>
+      <div class="card"><h3>INFORMATION SECURITY</h3><p>Firewalling, Mail Security, Web Security, E-Mail Encryption, RSA, VPN, AAA, and SSL-Certificates.</p></div>
+      <div class="card"><h3>WINDOWS & LINUX</h3><p>Working with AD, DNS, DHCP and Linux services for deployment and troubleshooting.</p></div>
+      <div class="card"><h3>LOAD-BALANCER</h3><p>Layer 3-4 and Application Layer Load Balancing using Citrix ADC (NetScaler).</p></div>
+      <div class="card"><h3>SYSTEM ADMINISTRATION</h3><p>Experience administering servers, logging, monitoring, and security appliances.</p></div>
     </div>
   </section>
 
