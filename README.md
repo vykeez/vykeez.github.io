@@ -57,6 +57,19 @@
       opacity:1;
       transform:translateY(0);
     }
+    .card {
+      background: #111;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .card p {
+      margin-bottom: 0.5rem;
+    }
     @media (max-width:600px) {
       .container { padding:1rem; }
     }
@@ -69,20 +82,38 @@
     <p>Systems Technician | Networking and Cybersecurity Specialist</p>
     <hr>
     <section>
+      <h2>About</h2>
+      <p>Hi, I'm Vysakh Keezhedath. Welcome to my portfolio website! I am a Network and Systems Engineer. I am excited to share with you my work and experience in this field.</p>
+      <p>I have always had a passion for Computer Systems and Networking and have pursued it throughout my education and career. I graduated from Informatics Academy with a degree in Network Engineering and have since gained valuable experience through Apprenticeship and job opportunities.</p>
+    </section>
+    <hr>
+    <section>
+      <h2>Education</h2>
+      <div class="card">
+        <h3>Diploma in Computer Systems Technician and Networking</h3>
+        <p>Completed at Informatics Academy, focused on Networking and System Technologies.</p>
+      </div>
+      <div class="card">
+        <h3>Cisco Cybersecurity Certificate</h3>
+        <p>Credential earned as part of specialization in Network Security and Cyber Defense.</p>
+      </div>
+      <div class="card">
+        <h3>Google Cybersecurity Certificate</h3>
+        <p>Professional Certificate covering risk management, incident response, and tools.</p>
+      </div>
+      <div class="card">
+        <h3>Apprenticeship at Algonquin College</h3>
+        <p>Hands-on lab training during studies: Networking Lab, Linux Lab, Server Room, PC Troubleshooting, IT Service Center.</p>
+      </div>
+    </section>
+    <hr>
+    <section>
       <h2>Skills</h2>
       <ul>
         <li>Networking: OSPF, VLANs, NAT, DHCP, Subnetting, VPN, DNS</li>
         <li>Cybersecurity: Cisco Cybersecurity Certificate, Firewall (ZPF), ACLs, SSH Hardening, Syslog Monitoring</li>
         <li>Systems & Servers: VMware vSphere, Windows Server, Linux (Ubuntu, Rocky), AD/DNS, File Services, DHCP, Veeam</li>
         <li>Hardware & Devices: Raspberry Pi, NAS setup, home server configuration, router troubleshooting</li>
-      </ul>
-    </section>
-    <hr>
-    <section>
-      <h2>Education &amp; Certifications</h2>
-      <ul>
-        <li>Diploma in Computer Networking – Canada</li>
-        <li>Cisco Cybersecurity Certification</li>
       </ul>
     </section>
     <hr>
