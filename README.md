@@ -102,13 +102,11 @@
       <h2>Job Experience</h2>
       <ul>
         <li><strong>Apprenticeship – Algonquin College</strong><br>Worked in Networking Labs, Linux Labs, Server Rooms, and IT Service Desk troubleshooting PCs and configuring enterprise infrastructure</li>
-      </ul>
-      <li><strong>Cyber Systems – India</strong> – Technician (1 Year)<br>Worked on SOHO routers, PC repair, NAS setup, and Raspberry Pi deployments</li>
-        
+        <li><strong>Cyber Systems – India</strong> – Technician (1 Year)<br>Worked on SOHO routers, PC repair, NAS setup, and Raspberry Pi deployments</li>
         <li><strong>Petro Canada</strong> – Manager (Present)<br>Supervising store operations and resolving tech issues</li>
         <li><strong>Loblaws</strong> – Employee (Present)<br>Supporting backend systems and logistics operations</li>
-        <li><strong>Amazon Warehouse</strong> – Associate<bre</li>
-        
+        <li><strong>Amazon Warehouse</strong> – Associate</li>
+      </ul>
     </section>
 
     <hr>
@@ -124,46 +122,16 @@
     <section>
       <h2>Skills</h2>
       <div class="skills-container">
-        <div>
-          <strong>Routing</strong>
-          <div class="progress-bar"><span style="width: 90%"></span></div>
-        </div>
-        <div>
-          <strong>Switching</strong>
-          <div class="progress-bar"><span style="width: 80%; background: #f44"></span></div>
-        </div>
-        <div>
-          <strong>Firewalling</strong>
-          <div class="progress-bar"><span style="width: 90%; background: gold"></span></div>
-        </div>
-        <div>
-          <strong>Web Security - Proxy</strong>
-          <div class="progress-bar"><span style="width: 90%; background: violet"></span></div>
-        </div>
-        <div>
-          <strong>Mail Security</strong>
-          <div class="progress-bar"><span style="width: 90%; background: teal"></span></div>
-        </div>
-        <div>
-          <strong>E-Mail Encryption</strong>
-          <div class="progress-bar"><span style="width: 85%; background: #66f"></span></div>
-        </div>
-        <div>
-          <strong>Windows Server</strong>
-          <div class="progress-bar"><span style="width: 70%"></span></div>
-        </div>
-        <div>
-          <strong>Linux Server</strong>
-          <div class="progress-bar"><span style="width: 65%"></span></div>
-        </div>
-        <div>
-          <strong>Load-Balancer</strong>
-          <div class="progress-bar"><span style="width: 70%"></span></div>
-        </div>
-        <div>
-          <strong>Virtualisation</strong>
-          <div class="progress-bar"><span style="width: 65%"></span></div>
-        </div>
+        <div><strong>Routing</strong><div class="progress-bar"><span style="width: 90%"></span></div></div>
+        <div><strong>Switching</strong><div class="progress-bar"><span style="width: 80%; background: #f44"></span></div></div>
+        <div><strong>Firewalling</strong><div class="progress-bar"><span style="width: 90%; background: gold"></span></div></div>
+        <div><strong>Web Security - Proxy</strong><div class="progress-bar"><span style="width: 90%; background: violet"></span></div></div>
+        <div><strong>Mail Security</strong><div class="progress-bar"><span style="width: 90%; background: teal"></span></div></div>
+        <div><strong>E-Mail Encryption</strong><div class="progress-bar"><span style="width: 85%; background: #66f"></span></div></div>
+        <div><strong>Windows Server</strong><div class="progress-bar"><span style="width: 70%"></span></div></div>
+        <div><strong>Linux Server</strong><div class="progress-bar"><span style="width: 65%"></span></div></div>
+        <div><strong>Load-Balancer</strong><div class="progress-bar"><span style="width: 70%"></span></div></div>
+        <div><strong>Virtualisation</strong><div class="progress-bar"><span style="width: 65%"></span></div></div>
       </div>
     </section>
 
@@ -171,30 +139,12 @@
     <section>
       <h2>Specialties</h2>
       <div class="cards-container">
-        <div class="card">
-          <h3>Routing</h3>
-          <p>Proficient in configuring and managing dynamic and static routing protocols including OSPF, EIGRP, RIP, and BGP in both enterprise and lab environments.</p>
-        </div>
-        <div class="card">
-          <h3>Switching</h3>
-          <p>Experience with Spanning Tree, vPC, VXLAN, and L2/L3 switching configuration.</p>
-        </div>
-        <div class="card">
-          <h3>Information Security</h3>
-          <p>Firewalling, Mail Security, Web Security, Encryption, VPN, SSL, and RSA integration.</p>
-        </div>
-        <div class="card">
-          <h3>Windows & Linux</h3>
-          <p>Administered AD, DNS, DHCP and file systems in both Windows and Linux environments.</p>
-        </div>
-        <div class="card">
-          <h3>Load-Balancer</h3>
-          <p>Application Layer balancing (L4–L7), Citrix ADC, and High-Availability design.</p>
-        </div>
-        <div class="card">
-          <h3>System Administration</h3>
-          <p>Maintaining servers, backups, syslog, proxy, monitoring tools, and patching infrastructure.</p>
-        </div>
+        <div class="card"><h3>Routing</h3><p>Proficient in configuring and managing dynamic and static routing protocols including OSPF, EIGRP, RIP, and BGP in both enterprise and lab environments.</p></div>
+        <div class="card"><h3>Switching</h3><p>Experience with Spanning Tree, vPC, VXLAN, and L2/L3 switching configuration.</p></div>
+        <div class="card"><h3>Information Security</h3><p>Firewalling, Mail Security, Web Security, Encryption, VPN, SSL, and RSA integration.</p></div>
+        <div class="card"><h3>Windows & Linux</h3><p>Administered AD, DNS, DHCP and file systems in both Windows and Linux environments.</p></div>
+        <div class="card"><h3>Load-Balancer</h3><p>Application Layer balancing (L4–L7), Citrix ADC, and High-Availability design.</p></div>
+        <div class="card"><h3>System Administration</h3><p>Maintaining servers, backups, syslog, proxy, monitoring tools, and patching infrastructure.</p></div>
       </div>
     </section>
 
