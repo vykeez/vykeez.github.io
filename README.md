@@ -181,6 +181,7 @@
         <a href="mailto:vkeez0002@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         <a href="https://github.com/vykeez" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/vysak_h__k?igsh=M2o0eDJleXNsZnk=" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/vysakhkeez" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </section>
   </div>
